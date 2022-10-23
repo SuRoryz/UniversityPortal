@@ -1,0 +1,13 @@
+<div class="admin-tab-add" id="add-rasp">
+	<div class="admin-tab-add-plus">
+		<div class="admin-tab-add-plus-wrapper">
+			+
+		</div>
+	</div>
+</div>
+{% for file in files %}
+	<div class="admin-tab-instanse">
+		{{ file.name }}
+		<div class="admin-tab-remove" id="rasp-{{file.id}}">-</div>
+	</div>
+{% endfor %}

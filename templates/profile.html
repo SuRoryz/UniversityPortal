@@ -1,0 +1,66 @@
+{% extends "template.html" %}
+<head>
+    {% block head %}
+        {{ super() }}
+        <script src="/static/profile.js"></script>
+        <link href="/static/profile.css" rel="stylesheet" />
+
+    {% endblock %}
+</head>
+{% include "navbar.html" %}
+{% block main %}
+    <div class="profile">
+        <div class="profile-header">
+            <div class="profile-header-top">
+                <div class="firstname">
+                    {{ user.first_name }}
+                </div>
+                <div class="lastname">
+                    {{ user.last_name }}
+                </div>
+            </div>
+            <div class="profile-header-main">
+                <div class="photo-wrapper">
+                    <img id="photo" src="/static/placeholder.png" />
+                </div>
+                <div class="info">
+                    <div class="info-wrapper">
+                        <div class="info-label">
+                            Должность:
+                        </div>
+                        <div class="info-value">
+                            {{ user.role }}
+                        </div>
+                    </div>
+                    {% if user.role == "Студент" %}
+                    <div class="info-wrapper">
+                        <div class="info-label">
+                            Группа:
+                        </div>
+                        <div class="info-value">
+                            {{ user.group }}
+                        </div>
+                    </div>
+                    {% endif %}
+                    <div class="info-wrapper">
+                        <div class="info-label">
+                            Профсоюз:
+                        </div>
+                        <div class="info-value">
+                            {% if user.prof %}
+                            Состоит
+                            {% else %}
+                            Не состоит
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% if request.user == user %}
+        <div class="profile-main">
+            <div class="profile-main-settings">
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

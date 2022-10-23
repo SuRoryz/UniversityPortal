@@ -1,0 +1,73 @@
+.profile {
+    width: 70%;
+    background-color: white;
+    border: 1px solid #c9c9c9ad;
+    padding: 1em;
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -1px 0px 10px 7px #0000000f;
+}
+
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    height: 15em;
+}
+
+.profile-header-top {
+    display: flex;
+    width: 100%;
+    font-size: 1.5em;
+    padding: 0.2em;
+    justify-content: start;
+    font-weight: 600;
+}
+
+.firstname {
+    padding: 0 0.5em;
+}
+
+.profile-header-main {
+    height: 70%;
+    display: flex;
+    width: 100%;
+    padding: 0.4em;
+    justify-content: space-between;
+}
+
+.photo-wrapper {
+    height: 100%;
+    width: 30%;
+    padding: 1em;
+}
+
+#photo {
+    height: 10em;
+    width: 10em;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.info {
+    width: 60%;
+    display: flex;
+    font-size: 1.2em;
+    font-weight: 600;
+    flex-direction: column;
+    justify-content: start;
+    align-items: self-end;
+    padding-right: 2em;
+    padding-top: 0.5em;
+}
+
+.info-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0.4em 0;
+}
+
+.info-label {
+    font-weight: 100;
+}

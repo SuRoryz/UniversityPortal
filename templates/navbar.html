@@ -1,0 +1,29 @@
+
+<div class="navbar">
+    <div class="navbar-content">
+        <div class="navbar-logo">
+            ВУЗ_NAME
+        </div>
+        <div class="navbar-menu">
+            {% if request.user.role == "Ректор" %}
+            <div class="navbar-element" name="admin">
+                Админка
+            </div>
+            {% endif %}
+            <div class="navbar-element" name="index">
+                Главная
+            </div>
+            <div class="navbar-element" name="profile">
+                Профиль
+            </div>
+            {% if request.user.role != "Ректор" and request.user.role != "Сотрудник"  %}
+            <div class="navbar-element" name="shleude">
+                Расписание
+            </div>
+            {% endif %}
+            <div class="navbar-element" name="logout">
+                Выход
+            </div>
+        </div>
+    </div>
+</div>

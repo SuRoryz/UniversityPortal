@@ -1,0 +1,13 @@
+<div id="rektor-dialog-window" name="{{tkn}}">
+    <div id="rektor-dialog-body">
+    {% for mail in mails %}
+        {% with message=mail %}
+            {% include "message.html" %}
+        {% endwith %}
+    {% endfor %}
+    </div>
+    <form id="messager-form" name="{{user_id}}">
+        <textarea id="message-text"></textarea>
+        <input type="submit" id="messager-submit" value=">"/>
+    </form>
+</div>

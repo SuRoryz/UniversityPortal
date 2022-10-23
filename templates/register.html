@@ -1,0 +1,47 @@
+{% extends "template.html" %}
+{% block head %}
+	{{ super() }}
+	<script src="static/register.js"></script>
+	<link href="static/register.css" rel="stylesheet" />
+{% endblock %}
+{% block main %}
+	{% from "formhelper.html" import render_field %}
+		<div class="register-main">
+			<div class="register-top">
+				Регистрация
+			</div>
+			<div class="register-content">
+				<form method="post" id="register-form">
+					{{ form.csrf_token() }}
+					<div class="form-row">
+						{{ render_field(form.firstname) }}
+						{{ render_field(form.lastname) }}
+					</div>
+					<div class="form-row">
+						{{ render_field(form.username) }}
+						{{ render_field(form.email) }}
+					</div>
+					<div class="form-row">
+						{{ render_field(form.password) }}
+						{{ render_field(form.confirm) }}
+					</div>
+					<div class="form-row for_student">
+						<div class="prof-wrapper">
+							{{form.is_prof.label}}{{ form.is_prof|safe }}
+						</div>
+						{{ render_field(form.group) }}
+					</div>
+					<div class="form-row-role">
+						Выберите должность: 
+						<select id="role">
+							<option>Студент</option>
+							<option>Преподаватель</option>
+							<option>Сотрудник</option>
+							<option>Ректор</option>
+						</select>
+					</div>
+					<input type="submit"/>
+				</form>
+			</div>
+		</div>
+{% endblock %}

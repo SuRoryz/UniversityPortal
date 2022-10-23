@@ -1,0 +1,25 @@
+
+{% set users = [] %}
+	{% for mail in mails|reverse %}
+		{% if not mail.idsender in users %}
+
+			{% set sender = get_user_by_id(mail.idsender) %}
+			{% set tmp = users.append(sender.id) %}
+			<input type="hidden">
+			<div class="admin-tab-instanse long">
+				<div class="rektor-dialog wrapper" name="{{ mail.idsender }}">
+					<div class="dialog-header">
+						<div class="dialog-user">
+							{{ sender.username }}
+						</div>
+						<div class="dialog-time">
+							{{ date_converter(mail.date) }}
+						</div>
+					</div>
+					<div class="dialog-last-message">
+						{{ mail.text }}
+					</div>
+				</div>
+			</div>
+		{% endif %}
+	{% endfor %}

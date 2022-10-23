@@ -1,0 +1,22 @@
+
+<div class="messager-btn">
+    ?
+</div>
+<div class="messager-window">
+    <input type="hidden" id="sk" value="{{request.user.room}}"/>
+    <script src="/static/messager.js"></script>
+    <link href="/static/messager.css" rel="stylesheet" />
+    <div id="messager-head">
+        <div id="messager-title">Обратная связь</div>
+        <div id="messager-close">X</div>
+    </div>
+    <div id="messager-chat">
+
+    </div>
+    <div id="messager-input">
+        <form id="messager-form">
+            <input id="message-text"/>
+            <input type="submit" id="message-submit" value=">"/>
+        </form>
+    </div>
+</div>

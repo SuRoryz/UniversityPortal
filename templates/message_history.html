@@ -1,0 +1,5 @@
+{% for mail in mails %}
+    {% with message=mail %}
+        {% include "message.html" %}
+    {% endwith %}
+{% endfor %}

@@ -1,0 +1,25 @@
+{% extends "template.html" %}
+{% block head %}
+	{{ super() }}
+	<script src="/static/admin.js"></script>
+	<link href="/static/admin.css" rel="stylesheet" />
+{% endblock %}
+{% include "navbar.html" %}
+{% block main %}
+	<div id="menu">
+		<div id="menu-navbar">
+			<div id="menu-tabs">
+				<div name="users" class="menu-tab">Пользователи</div>
+				<div name="news" class="menu-tab">Новости</div>
+				<div name="rasp" class="menu-tab">Расписание</div>
+				<div name="rektor" class="menu-tab">Сообщения</div>
+			</div>
+			<div class="menu-title">
+				Админ панель
+			</div>
+		</div>
+		<div id="menu-body">
+			
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "window.html" %}
+{% block content %}
+	<form id="admin-add-form" name="rasp">
+		<select id="#rasp-type">
+			<option>
+				Преподавателям
+			</option>
+			<option>
+				Студентам
+			</option>
+		</select>
+		<input type="file" id="file">
+		<input type="submit"/>
+	</form>
+{% endblock %}

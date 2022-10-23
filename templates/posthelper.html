@@ -1,0 +1,15 @@
+{% macro render_post(post) %}
+<div class="post" id="post-{{post.id}}">
+    <div class="post-head">
+        {{ post.label }}
+    </div>
+    <div class="post-content">
+        {{ post.text }}
+    </div>
+    <div class="post-footer">
+        <div class="post-footer-date">
+            {{ date_converter(post.date) }}
+        </div>
+    </div>
+</div>
+{% endmacro %}

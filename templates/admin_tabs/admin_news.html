@@ -1,0 +1,36 @@
+<div class="admin-tab-add" id="add-news">
+	<div class="admin-tab-add-plus">
+		<div class="admin-tab-add-plus-wrapper">
+			+
+		</div>
+	</div>
+</div>
+{% for post in posts %}
+	
+	<div class="admin-tab-instanse">
+		<div class="instanse-fields">
+			<div class="instanse-field">
+				{{ post.for_employ }}
+			</div>
+			<div class="instanse-field">
+				{{ post.label}}
+			</div>
+			<div class="instanse-field">
+				{{ date_converter(post.date) }}
+			</div>
+			{% set owner = get_user_by_id(post.user_id) %}
+			<div class="instanse-field">
+				{{ owner.id }}
+			</div>
+			<div class="instanse-field">
+				{{ owner.first_name }}
+			</div>
+			<div class="instanse-field">
+				{{ owner.last_name }}
+			</div>
+		</div>
+		<div class="instanse-remove">
+			<div class="admin-tab-remove" id="news-{{post.id}}">-</div>
+		</div>
+	</div>
+{% endfor %}

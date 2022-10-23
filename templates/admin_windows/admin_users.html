@@ -1,0 +1,43 @@
+{% extends "window.html" %}
+{% block content %}
+	<form id="admin-add-form" name="users">
+		<div class="field-row">
+			<div class="field-wrapper">
+				<label for="email">Почта: </label>
+				<input id="email"/>
+			</div>
+			<div class="field-wrapper">
+				<label for="username">Псевдоним: </label>
+				<input id="username"/>
+			</div>
+		</div>
+		<div class="field-row">
+			<div class="field-wrapper">
+				<label for="password">Пароль: </label>
+				<input id="password"/>
+			</div>
+			<div class="field-wrapper">
+				<label for="role">Должность: </label>
+				<select id="role">
+					<option>Студент</option>
+					<option>Преподаватель</option>
+					<option>Сотрудник</option>
+					<option>Ректор</option>
+				</select>
+			</div>
+		</div>
+		<div class="field-row">
+			<div class="field-wrapper">
+				<label for="first_name">Имя: </label>
+				<input id="first_name"/>
+			</div>
+			<div class="field-wrapper">
+				<label for="last_name">Фамилия: </label>
+				<input id="last_name"/>
+			</div>
+		</div>
+		<div class="submit">
+			<input type="submit" value="+"/>
+		</div>
+	</form>
+{% endblock %}

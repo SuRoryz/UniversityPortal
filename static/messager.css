@@ -1,0 +1,124 @@
+.messager-window {
+    width: 16em;
+    height: 20em;
+    border: 2px solid #5555df;
+    padding: 1em;
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -1px 0px 10px 0px #0000000f;
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    display: none;
+    background-color: white;
+}
+
+#messager-head {
+    position: absolute;
+    top: 0;
+    background-color: #5555df;
+    width: 100%;
+    height: 2em;
+    color: white;
+    left: 0;
+    font-weight: bold;
+    font-family: "Century Gothic";
+    font-size: 1.1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#messager-title {
+    position: absolute;
+    left: 0.5em
+}
+
+#messager-close {
+    position: absolute;
+    right: 0.5em;
+    cursor: pointer;
+}
+
+#messager-chat {
+    width: 100%;
+    margin-top: 2em;
+    height: 15em;
+    background-color: #ededed;
+    overflow: hidden;
+    overflow-y: scroll;
+    border-radius: 4px;
+}
+
+.message-instanse {
+    margin: 0.4em;
+    background-color: white;
+    width: 60%;
+    padding: 0.5em;
+    border-radius: 0.2em;
+}
+
+.message-instanse.mine {
+    background-color: #e5e5e5;
+    margin-left: 4.5em;
+}
+
+#messager-input {
+    display: flex;
+    width: 100%;
+    height: 1.3em;
+    margin-top: 1em;
+    font-size: 1.5em;
+}
+
+#messager-form {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#message-text {
+    outline: none;
+    border: 1px solid #bbbbbb;
+    border-radius: 3px 0 0 3px;
+    padding: 0 0.5em;
+}
+
+#message-submit {
+    width: 2.5em;
+    background-color: #5555df;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 0.2em;
+}
+
+.rektor-dialog-body {
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    background-color: #ededed;
+    top: 0;
+}
+
+.messager-btn {
+    width: 1em;
+    height: 1em;
+    background-color: #5555df;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: -1px 0px 10px 4px #00000012;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3em;
+    padding: 0.3em;
+    position: fixed;
+    right: 1em;
+    bottom: 1em;
+    z-index: 99999;
+    cursor: pointer;
+}

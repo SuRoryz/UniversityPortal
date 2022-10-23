@@ -1,0 +1,33 @@
+{% extends "window.html" %}
+{% block content %}
+
+	<form id="admin-add-form" name="news">
+		<div class="field-row">
+			<div class="field-wrapper">
+				<label for="label">Заголовок: </label>
+				<input id="label"/>
+			</div>
+			<div class="field-wrapper">
+				<label for="user_id">ID Автора: </label>
+				<input id="user_id"/>
+			</div>
+			<div class="field-wrapper">
+				<select id="field-type">
+					<option>
+						Студентам
+					</option>
+					<option>
+						Сотрудникам
+					</option>
+				</select>
+			</div>
+		</div>
+		<div class="field-row">
+			<label for="text">Текст: </label>
+			<textarea id="text"></textarea>
+		</div>
+		<div class="submit">
+			<input type="submit" value="+"/>
+		</div>
+	</form>
+{% endblock %}

@@ -1,0 +1,5 @@
+<div class="message-instanse {% if message.idsender == request.user.id %} mine {% endif %}">
+    <div class="message-wrapper {% if message.idsender == request.user.id %} mine {% endif %}">
+        {{ message.text }}
+    </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="admin-tab-add" id="add-user">
+	<div class="admin-tab-add-plus">
+		<div class="admin-tab-add-plus-wrapper">
+			+
+		</div>
+	</div>
+</div>
+{% for user in users %}
+	
+	<div class="admin-tab-instanse">
+		<div class="instanse-fields">
+			<div class="instanse-field">
+				{{ user.id }}
+			</div>
+			<div class="instanse-field">
+				{{ user.first_name}}
+			</div>
+			<div class="instanse-field">
+				{{ user.last_name }}
+			</div>
+			<div class="instanse-field">
+				{{ user.email }}
+			</div>
+			<div class="instanse-field">
+				{{ user.group }}
+			</div>
+		</div>
+		<div class="instanse-remove">
+			<div class="admin-tab-remove" id="users-{{user.id}}">-</div>
+		</div>
+	</div>
+{% endfor %}

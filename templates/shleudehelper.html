@@ -1,0 +1,20 @@
+{% macro render_shleude(json) %}
+<div id="shleude">
+        {% for day in json %}
+        <div class="shleude-day">
+            <div class="shleude-day-label">
+                {{ day }}
+            </div>
+            <div class="shleude-lessons">
+                {% for lesson in json[day] %}
+                    <div class="shleude-lesson-box">
+                        <div class="lesson-subject">{{ lesson.subject }}</div>
+                        <div class="lesson-teacher">{{ lesson.teacher }}</div>
+                        <div class="lesson-aud">{{ lesson.aud }}</div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+</div>
+{% endmacro %}

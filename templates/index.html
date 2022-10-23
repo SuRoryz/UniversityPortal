@@ -1,0 +1,17 @@
+{% extends "template.html" %}
+<head>
+	{% block head %}
+		{{ super() }}
+		<script src="/static/index.js"></script>
+		<link href="/static/index.css" rel="stylesheet" />
+	{% endblock %}
+</head>
+{% include "navbar.html" %}
+{% block main %}
+	<input type="hidden" id="isemploy" name="false">
+	{% for new in news %}
+		{% from "posthelper.html" import render_post %}
+		{{ render_post(new) }}
+	{% endfor %}
+	{% include 'messeger.html' %}
+{% endblock %}

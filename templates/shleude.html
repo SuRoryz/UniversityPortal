@@ -1,0 +1,32 @@
+{% extends "template.html" %}
+{% block head %}
+	{{ super() }}
+	<script src="static/shleude.js"></script>
+    <link href="static/shleude.css" rel="stylesheet" />
+{% endblock %}
+{% block main %}
+    {% include "navbar.html" %}
+    <div class="shleude-main">
+        <div class="shleude-header">
+            <div class="shleude-form-label">
+                {% if request.user.role == "Студент" %}
+                    Расписание для студентов
+                {% endif %}
+                {% if request.user.role == "Преподаватель" %}
+                    Расписание для преподователей
+                {% endif %}
+            </div>
+            <form id='shleude-form' {% if request.user.role == "Преподаватель" %}class="teacher"{% endif %}>
+                <select id="group_id">
+                    {% for group in groups %}
+                        <option value="{{loop.index0}}">{{group}}</option>
+                    {% endfor %}
+                </select>
+                <input type="submit"></form>
+            </form>
+        </div>
+        <div class="shleude-content">
+        </div>
+    </div>
+    {% include 'messeger.html' %}
+{% endblock %}
